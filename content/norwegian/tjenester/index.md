@@ -15,7 +15,7 @@ banner:
     label: "Kontakt oss"
     link: "/kontakt"
 
-# Detailed Services
+# Detailed Servicesw
 features:
   - title: "Forsikringsavtaler"
     content: "Grundig gjennomgang og optimering av forsikringsporteføljen for din legepraxis"

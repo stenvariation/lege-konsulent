@@ -6,7 +6,7 @@ banner:
   image: "/images/banner.png"
   button:
     enable: true
-    label: "Få en gratis gjennomgang"
+    label: "Få en gjennomgang"
     link: "/kontakt"
 
 # Features
