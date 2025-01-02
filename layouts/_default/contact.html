@@ -4,66 +4,66 @@
       <div class="row">
         <!-- Contact Form Column -->
         <div class="lg:col-7">
-          <form action="{{ site.Params.contact_form_action }}" method="POST" class="bg-white rounded-lg p-6 shadow-sm">
+          <form action="{{ site.Params.contact_form_action }}" method="POST" class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg p-6 shadow-sm dark:shadow-gray-800">
             <div class="mb-6">
-              <label for="name" class="form-label">
+              <label for="name" class="form-label text-dark dark:text-white">
                 Navn <span class="text-red-500">*</span>
               </label>
               <input
                 id="name"
                 name="name"
-                class="form-input"
+                class="form-input bg-white dark:bg-darkmode-body border-gray-200 dark:border-gray-700 text-dark dark:text-white"
                 placeholder="Ola Nordmann"
                 type="text"
                 required />
             </div>
 
             <div class="mb-6">
-              <label for="email" class="form-label">
+              <label for="email" class="form-label text-dark dark:text-white">
                 E-post <span class="text-red-500">*</span>
               </label>
               <input
                 id="email"
                 name="email"
-                class="form-input"
+                class="form-input bg-white dark:bg-darkmode-body border-gray-200 dark:border-gray-700 text-dark dark:text-white"
                 placeholder="din@epost.no"
                 type="email"
                 required />
             </div>
 
             <div class="mb-6">
-              <label for="phone" class="form-label">
+              <label for="phone" class="form-label text-dark dark:text-white">
                 Telefon <span class="text-red-500">*</span>
               </label>
               <input
                 id="phone"
                 name="phone"
-                class="form-input"
+                class="form-input bg-white dark:bg-darkmode-body border-gray-200 dark:border-gray-700 text-dark dark:text-white"
                 placeholder="999 99 999"
                 type="tel"
                 required />
             </div>
 
             <div class="mb-6">
-              <label for="practice" class="form-label">
+              <label for="practice" class="form-label text-dark dark:text-white">
                 Navn på legepraksis
               </label>
               <input
                 id="practice"
                 name="practice"
-                class="form-input"
+                class="form-input bg-white dark:bg-darkmode-body border-gray-200 dark:border-gray-700 text-dark dark:text-white"
                 placeholder="Din legepraksis"
                 type="text" />
             </div>
 
             <div class="mb-6">
-              <label for="message" class="form-label">
+              <label for="message" class="form-label text-dark dark:text-white">
                 Melding <span class="text-red-500">*</span>
               </label>
               <textarea
                 id="message"
                 name="message"
-                class="form-input"
+                class="form-input bg-white dark:bg-darkmode-body border-gray-200 dark:border-gray-700 text-dark dark:text-white"
                 placeholder="Fortell oss kort om hva vi kan hjelpe deg med..."
                 rows="6"
                 required></textarea>
@@ -71,8 +71,8 @@
 
             <div class="mb-6">
               <label class="flex items-center">
-                <input type="checkbox" class="form-checkbox" required />
-                <span class="ml-2 text-sm">
+                <input type="checkbox" class="form-checkbox dark:border-gray-700 dark:bg-darkmode-body" required />
+                <span class="ml-2 text-sm text-dark/75 dark:text-white/75">
                   Jeg aksepterer at Benex kontakter meg angående mine henvendelser og samtykker til
                   <a href="/personvern" class="text-primary hover:underline">personvernerklæringen</a>
                 </span>
@@ -85,28 +85,28 @@
 
         <!-- Contact Information Column -->
         <div class="lg:col-4 lg:ml-auto mt-8 lg:mt-0">
-          <div class="bg-white rounded-lg p-6 shadow-sm">
-            <h4 class="mb-4">Kontaktinformasjon</h4>
+          <div class="bg-theme-light dark:bg-darkmode-theme-light rounded-lg p-6 shadow-sm dark:shadow-gray-800">
+            <h4 class="mb-4 text-dark dark:text-white">Kontaktinformasjon</h4>
 
             <div class="mb-6">
-              <p class="mb-2 font-medium">Telefon</p>
+              <p class="mb-2 font-medium text-dark dark:text-white">Telefon</p>
               <a href="tel:+4799999999" class="text-primary hover:underline">+47 XX XX XX XX</a>
             </div>
 
             <div class="mb-6">
-              <p class="mb-2 font-medium">E-post</p>
+              <p class="mb-2 font-medium text-dark dark:text-white">E-post</p>
               <a href="mailto:post@benex.no" class="text-primary hover:underline">post@benex.no</a>
             </div>
 
             <div class="mb-6">
-              <p class="mb-2 font-medium">Adresse</p>
-              <p class="text-gray-600">[Din bedriftsadresse]</p>
+              <p class="mb-2 font-medium text-dark dark:text-white">Adresse</p>
+              <p class="text-dark/75 dark:text-white/75">[Din bedriftsadresse]</p>
             </div>
 
             <div>
-              <p class="mb-2 font-medium">Åpningstider</p>
-              <p class="text-gray-600">Mandag-Fredag: 08:00-16:00</p>
-              <p class="text-gray-600">Lørdag-Søndag: Stengt</p>
+              <p class="mb-2 font-medium text-dark dark:text-white">Åpningstider</p>
+              <p class="text-dark/75 dark:text-white/75">Mandag-Fredag: 08:00-16:00</p>
+              <p class="text-dark/75 dark:text-white/75">Lørdag-Søndag: Stengt</p>
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@
       <div class="container">
         <div
           id="map"
-          class="rounded-lg shadow-sm"
+          class="rounded-lg shadow-sm dark:shadow-gray-800"
           style="height: 400px;"
           data-latitude="{{ site.Params.google_map.map_latitude }}"
           data-longitude="{{ site.Params.google_map.map_longitude }}"
