@@ -1,0 +1,30 @@
+[[main]]
+name = "Hjem"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Om oss"
+url = "/om-oss"
+weight = 2
+
+[[main]]
+name = "Tjenester"
+url = "/tjenester"
+weight = 3
+
+# Bunntekst-meny
+[[footer]]
+name = "Om oss"
+url = "/om-oss"
+weight = 1
+
+[[footer]]
+name = "Kontakt"
+url = "/kontakt"
+weight = 2
+
+[[footer]]
+name = "Personvernerklæring"
+url = "/personvern"
+weight = 3

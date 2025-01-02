@@ -1,6 +1,6 @@
-################ English language ##################
-[en]
-languageName = "En"
-languageCode = "en-us"
-contentDir = "content/english"
+################ Norsk bokmål språk ##################
+[nb]
+languageName = "Norsk"
+languageCode = "nb-no"
+contentDir = "content/norwegian"
 weight = 1

@@ -1,0 +1,138 @@
+{{ define "main" }}
+  <section class="section-sm">
+    <div class="container">
+      <div class="row">
+        <!-- Contact Form Column -->
+        <div class="lg:col-7">
+          <form action="{{ site.Params.contact_form_action }}" method="POST" class="bg-white rounded-lg p-6 shadow-sm">
+            <div class="mb-6">
+              <label for="name" class="form-label">
+                Navn <span class="text-red-500">*</span>
+              </label>
+              <input
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="Ola Nordmann"
+                type="text"
+                required />
+            </div>
+
+            <div class="mb-6">
+              <label for="email" class="form-label">
+                E-post <span class="text-red-500">*</span>
+              </label>
+              <input
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="din@epost.no"
+                type="email"
+                required />
+            </div>
+
+            <div class="mb-6">
+              <label for="phone" class="form-label">
+                Telefon <span class="text-red-500">*</span>
+              </label>
+              <input
+                id="phone"
+                name="phone"
+                class="form-input"
+                placeholder="999 99 999"
+                type="tel"
+                required />
+            </div>
+
+            <div class="mb-6">
+              <label for="practice" class="form-label">
+                Navn på legepraksis
+              </label>
+              <input
+                id="practice"
+                name="practice"
+                class="form-input"
+                placeholder="Din legepraksis"
+                type="text" />
+            </div>
+
+            <div class="mb-6">
+              <label for="message" class="form-label">
+                Melding <span class="text-red-500">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-input"
+                placeholder="Fortell oss kort om hva vi kan hjelpe deg med..."
+                rows="6"
+                required></textarea>
+            </div>
+
+            <div class="mb-6">
+              <label class="flex items-center">
+                <input type="checkbox" class="form-checkbox" required />
+                <span class="ml-2 text-sm">
+                  Jeg aksepterer at Benex kontakter meg angående mine henvendelser og samtykker til
+                  <a href="/personvern" class="text-primary hover:underline">personvernerklæringen</a>
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full">Send henvendelse</button>
+          </form>
+        </div>
+
+        <!-- Contact Information Column -->
+        <div class="lg:col-4 lg:ml-auto mt-8 lg:mt-0">
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h4 class="mb-4">Kontaktinformasjon</h4>
+
+            <div class="mb-6">
+              <p class="mb-2 font-medium">Telefon</p>
+              <a href="tel:+4799999999" class="text-primary hover:underline">+47 XX XX XX XX</a>
+            </div>
+
+            <div class="mb-6">
+              <p class="mb-2 font-medium">E-post</p>
+              <a href="mailto:post@benex.no" class="text-primary hover:underline">post@benex.no</a>
+            </div>
+
+            <div class="mb-6">
+              <p class="mb-2 font-medium">Adresse</p>
+              <p class="text-gray-600">[Din bedriftsadresse]</p>
+            </div>
+
+            <div>
+              <p class="mb-2 font-medium">Åpningstider</p>
+              <p class="text-gray-600">Mandag-Fredag: 08:00-16:00</p>
+              <p class="text-gray-600">Lørdag-Søndag: Stengt</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ if site.Params.google_map.enable }}
+    <!-- Google Maps Section -->
+    <section class="section-sm">
+      <div class="container">
+        <div
+          id="map"
+          class="rounded-lg shadow-sm"
+          style="height: 400px;"
+          data-latitude="{{ site.Params.google_map.map_latitude }}"
+          data-longitude="{{ site.Params.google_map.map_longitude }}"
+          data-marker="{{ site.Params.google_map.map_marker | relURL }}"
+          data-marker-name="{{ site.Title }}">
+        </div>
+      </div>
+    </section>
+
+    {{ $gmap:= resources.Get "plugins/maps/google-map.js" }}
+    <script defer src="{{ $gmap.RelPermalink }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ site.Params.google_map.map_api_key }}&libraries=places"></script>
+  {{ end }}
+
+{{ end }}
